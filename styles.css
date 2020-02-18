@@ -54,9 +54,7 @@ body {
 }
 
 .container {
-
     display: flex;
-
 }
 
 .right-content {
@@ -65,20 +63,17 @@ body {
 }
 
 .logo {
-    /* border: 1px solid violet; */
     width: 65%;
     margin: 65px auto 0;
 }
 
 .main-content {
-    /* border: 1px solid green; */
     width: 65%;
     margin: 0 auto;
     height: 70%;
 }
 
 .title {
-    /* border: 1px solid peru; */
     text-transform: uppercase;
     margin-top: 130px;
     font-size: 50px;
@@ -95,7 +90,6 @@ span {
 }
 
 .description {
-    /* border: 1px solid palegreen; */
     color: #ce9797;
     font-size: 17px;
     line-height: 1.4;
@@ -103,27 +97,6 @@ span {
     width: 80%;
     margin: 25px 0;
 }
-
-/* .email-box {
-    border: 1px solid #d8ccce;
-    border-radius: 50px;
-    width: 80%;
-    height: 60px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#email {
-    border: none;
-    background-color: transparent;
-    width: 70%;
-    font-size: 17px;
-    font-weight: 400;
-    color: #ce9797;
-}
-
- */
-
 
 form {
     display: flex;
@@ -181,15 +154,9 @@ input[type="email"]:focus:invalid {
     background-position: 330px 16px;
 }
 
-
 :not(output):-moz-ui-invalid {
     box-shadow: none;
   }
-
-
-/* input[type="email"]:invalid:not(:focus):not(:placeholder-shown) {
-    border: 1px solid #f96262;
-  } */
 
 input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label {
     opacity: 0;
@@ -213,11 +180,14 @@ input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
     width: 22%;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border-radius: 30px;
-    box-shadow: 0px 40px 153px -18px rgba(238,140,140,0.83);
     cursor: pointer;
+    box-shadow: 0 6px 16px 8px rgba(220,159,158,0.23);
 }
 
-
+.btn:hover {
+    background: linear-gradient(135deg, #FADADB 0%, #F8C8C8 100%);
+    box-shadow: 0px 12px 15px 3px rgba(232,193,194,0.57)
+}
 
 .attribution {
     padding-top: 20px;
@@ -229,3 +199,12 @@ input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
     color: #f96262;
 }
 
+
+
+/* Mobile */
+
+@media screen and (max-width: 376px) {
+    .container {
+        flex-direction: column;
+    }
+}
