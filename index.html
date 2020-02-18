@@ -22,10 +22,21 @@
         <h1 class="title"><span>We're</span><br>coming<br>soon</h1>
         <p class="description">Hello fellow shoppers! We're currently building our new fashion store. 
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
-          <div class="email-box">
-            <input class="email" type="email" placeholder="Email Address">
-            <button class="btn"><img src="images/icon-arrow.svg" alt="arrow icon"></button>
-          </div>
+
+            <form action="#0">
+ 
+              <div class="email-box">
+                <input type="email" id="email" name="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`
+                {|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required placeholder=" ">
+                <label for="email">Email address</label>
+                <div class="requirements">
+                  Please provide a valid email
+                </div>
+              </div>
+              
+              <button class="btn" type="submit"><img src="images/icon-arrow.svg" alt="arrow icon"></button>
+            </form>
+
       </div>
     </div>
     <div class="left-content"> 

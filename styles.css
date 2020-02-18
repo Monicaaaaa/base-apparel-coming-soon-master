@@ -104,7 +104,7 @@ span {
     margin: 25px 0;
 }
 
-.email-box {
+/* .email-box {
     border: 1px solid #d8ccce;
     border-radius: 50px;
     width: 80%;
@@ -113,7 +113,7 @@ span {
     justify-content: flex-end;
 }
 
-.email {
+#email {
     border: none;
     background-color: transparent;
     width: 70%;
@@ -122,17 +122,102 @@ span {
     color: #ce9797;
 }
 
+ */
+
+
+form {
+    display: flex;
+    border: 1px solid #d8ccce;
+    border-radius: 50px;
+    width: 80%;
+    height: 60px;
+    justify-content: flex-end;
+}
+
+.email-box {
+    position: relative;
+    width: 80%;
+}
+
+label {
+    font-size: 17px;
+    font-weight: 400;
+    color: #ce9797;
+    position: absolute;
+    top: 22px;
+    left: 30px;
+}
+
+input[type="email"] {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 20px 50px 20px 30px;
+    background: transparent;
+}
+
+input[type="email"]:focus {
+    outline: none;
+}
+
+input[type="email"]:focus + label {
+    opacity: 0;
+}
+
+input[type="email"]:required:valid {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 330px 18px;
+  }
+
+input[type="email"]:valid + label {
+    opacity: 0;
+}
+
+input[type="email"]:focus:invalid {
+    background: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 330px 16px;
+}
+
+
+:not(output):-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+
+/* input[type="email"]:invalid:not(:focus):not(:placeholder-shown) {
+    border: 1px solid #f96262;
+  } */
+
+input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+}
+
+input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding: 15px 50px 0 30px;
+}
+
+.requirements {
+    padding: 15px 50px 0 30px;
+    color: #dc9f9e;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+  }
+
 .btn {
     border: none;
     width: 22%;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border-radius: 30px;
     box-shadow: 0px 40px 153px -18px rgba(238,140,140,0.83);
+    cursor: pointer;
 }
 
-.left-content {
-    /* border: 1px solid blue; */
-}
+
 
 .attribution {
     padding-top: 20px;
@@ -143,3 +228,4 @@ span {
     text-decoration: none;
     color: #f96262;
 }
+
