@@ -126,7 +126,6 @@ label {
 input[type="email"] {
     width: 80%;
     border: none;
-    outline: none;
     padding: 20px 50px 20px 30px;
     background: transparent;
 }
@@ -156,7 +155,7 @@ input[type="email"]:focus:invalid {
     background-repeat: no-repeat;
 }
 
-:not(output):-moz-ui-invalid {
+:not(output):invalid {
     box-shadow: none;
   }
 
@@ -190,7 +189,7 @@ input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
 
 .btn:hover {
     background: linear-gradient(135deg, #FADADB 0%, #F8C8C8 100%);
-    box-shadow: 0px 12px 15px 3px rgba(232,193,194,0.57)
+    box-shadow: 0 12px 15px 3px rgba(232,193,194,0.57)
 }
 
 /* RIGHT CONTENT */
